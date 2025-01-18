@@ -47,7 +47,7 @@
       }
     }
   },
-  "postCreateCommand": "mvn --version && java -version",
+  "postCreateCommand": "code --install-extension formulahendry.code-runner && code --install-extension vscjava.vscode-java-pack && code --install-extension cweijan.vscode-office && code --install-extension plibither8.remove-comments && code --install-extension TabNine.tabnine-vscode && code --install-extension tomoki1207.pdf && code --install-extension Blackboxapp.blackbox && code --install-extension Codeium.codeium && mvn --version && java -version",
   "forwardPorts": [],
   "remoteUser": "vscode",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",

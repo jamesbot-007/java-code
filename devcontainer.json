@@ -1,0 +1,55 @@
+{
+  "name": "Java + Maven Development",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "formulahendry.code-runner",
+        "vscjava.vscode-java-pack",
+        "cweijan.vscode-office",
+        "plibither8.remove-comments",
+        "TabNine.tabnine-vscode",
+        "tomoki1207.pdf",
+        "Blackboxapp.blackbox",
+        "Codeium.codeium"
+      ],
+      "settings": {
+        "code-runner.runInTerminal": true,
+        "editor.mouseWheelZoom": true,
+        "files.autoSave": "afterDelay",
+        "editor.wordWrap": "on",
+        "editor.guides.bracketPairs": true,
+        "workbench.editorAssociations": {
+          "*.md": "default",
+          "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+        },
+        "code-runner.executorMap": {
+          "java": "cd $dir && javac -d out $fileName && java -cp out $fileNameWithoutExt"
+        },
+        "editor.stickyScroll.enabled": false,
+        "tabnine.experimentalAutoImports": true,
+        "editor.fontLigatures": true,
+        "editor.minimap.enabled": false,
+        "explorer.compactFolders": false,
+        "gradle.autoDetect": "off",
+        "window.commandCenter": false,
+        "workbench.layoutControl.enabled": false,
+        "workbench.editor.empty.hint": "hidden",
+        "vscode-office.editorTheme": "Dracula",
+        "vscode-office.openOutline": false,
+        "terminal.integrated.env.windows": {},
+        "workbench.iconTheme": "office-material-icon-theme",
+        "terminal.integrated.fontSize": 16,
+        "workbench.colorTheme": "Default Dark+"
+      }
+    }
+  },
+  "postCreateCommand": "mvn --version && java -version",
+  "forwardPorts": [],
+  "remoteUser": "vscode",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace"
+}
